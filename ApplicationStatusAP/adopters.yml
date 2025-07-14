@@ -1,0 +1,19 @@
+# adopters.yml for ApplicationStatusAPI v2.1
+
+- firm: Magnifact
+  status: Testing
+  implementation_date: 2025-08-15
+  verified: true
+  contact: Krish Krishnan 
+  kvkrishnan@magnifact.com
+  tags: [fast-track, partner-ready]
+  notes: Development is nearly complete, and we’re currently in the testing phase. 
+
+- firm: x
+  status: In Progress
+  implementation_date: null
+  verified: false
+  contact: x@x.com
+  tags: [pilot]
+  notes: Targeting Q4 deployment
+
