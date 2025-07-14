@@ -94,4 +94,4 @@ The IRI Governance Committee may:
 🙌 Collaboration & Respect
 All contributors are expected to treat others with professionalism and respect. The goal is shared progress—not competition. Disagreements should be handled constructively and in good faith.
 
-
+See CODE_OF_CONDUCT.md for additional contribution guidelines.
