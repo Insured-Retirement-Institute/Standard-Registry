@@ -22,7 +22,7 @@
   tags: [pilot firm, in production, partner-ready]
   notes: 
 
-  - firm: Prudential
+- firm: Prudential
   status: Implemented
   implementation_date: 2025-04-2025
   verified: true
@@ -30,7 +30,7 @@
   tags: [pilot firm, in production, partner-ready]
   notes: 
 
-  - firm: Sammons
+- firm: Sammons
   status: Implemented
   implementation_date: 2025-06-2025
   verified: true
@@ -38,7 +38,7 @@
   tags: [pilot firm, in production, partner-ready]
   notes: 
 
-  - firm: New York Life
+- firm: New York Life
   status: Implemented
   implementation_date: 2025-06-2025
   verified: true
