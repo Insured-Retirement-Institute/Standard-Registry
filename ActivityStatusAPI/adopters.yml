@@ -1,0 +1,23 @@
+- firm: Magnifact
+  status: Implemented
+  implementation_date: 2025-02-01
+  verified: true
+  contact: Krish Krishnan |  kvkrishnan@magnifact.com
+  tags: [partner-ready]
+  notes: Implemented  wiht FIG, Global Atlantic. 
+
+- firm: JPM Chase
+  status: Implemented
+  implementation_date: 2025-05-2025
+  verified: true
+  contact: Snyder, Leland C | leland.c.snyder@jpmchase.com
+  tags: [pilot, partner-ready]
+  notes: Implemented with Athene, DTCC, and Global Atlantic
+
+- firm: Athen
+  status: Implemented
+  implementation_date: 2025-05-2025
+  verified: true
+  contact: Lana Nelson | lnelson@athene.com
+  tags: [pilot, partner-ready]
+  notes: Implemented with Athene, DTCC, and Global Atlantic
