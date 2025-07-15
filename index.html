@@ -14,7 +14,35 @@
 </head>
 <body>
   <h1>📋Digital First for Annuity Standards Registry</h1>
-  <p>Here are firms that have adopted the Digital First for Annuity standards and versions:</p>
+    <p>
+  This repository tracks industry adoption of the <strong>IRI Digital First for Annuity</strong> open standards by version. It is a centralized, version-controlled list of each standard and the firms that have implemented them. 
+  Stakeholders can easily identify which firms have adopted each standard—and which version. Using the standards enable faster, more seamless integrations that reduce onboarding time and increase interoperability across the ecosystem.
+  </p>
+
+<p>
+  Firms can submit pull requests to indicate their implementation status, which promotes transparency, collaboration, and faster onboarding.
+</p>
+
+<h2>📂 Structure of the Registry</h2>
+<ul>
+  <li><strong>Firm name</strong></li>
+  <li><strong>Implementation status</strong> (Implemented, In Progress, Planned)</li>
+  <li><strong>Date of implementation</strong></li>
+  <li><strong>Verification status</strong></li>
+  <li><strong>Contact information</strong></li>
+  <li><strong>Optional tags and notes</strong></li>
+</ul>
+
+<h2>🔧 Purpose of adopters.yml Files</h2>
+<p>
+  Each <code>adopters.yml</code> file captures:
+</p>
+<ul>
+  <li>Which firms have adopted a specific standard</li>
+  <li>Which version of that standard they’ve adopted</li>
+  <li>What their implementation status is</li>
+  <li>Relevant metadata: contact info, verification, dates, tags</li>
+</ul>
 
   <div id="tables-container"></div>
 
@@ -22,7 +50,7 @@
     const standards = [
       { name: 'ApplicationStatusAPI v1.0', yaml: 'ApplicationStatusAPI/adopters.yml' },
       { name: 'ActivityStatusAPI v1.0', yaml: 'ActivityStatusAPI/adopters.yml' },
-      { name: 'PaperlessReplacementAPI v1.0', yaml: 'PaperlessReplacementsAPI/adopters.yml' }
+      { name: 'PaperlessReplacementsAPI v1.0', yaml: 'PaperlessReplacementsAPI/adopters.yml' }
     ];
 
     async function loadAndRender() {
