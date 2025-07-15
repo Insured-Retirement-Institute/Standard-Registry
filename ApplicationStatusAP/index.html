@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Industry Standards Registry</title>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { border: 1px solid #ccc; padding: 0.5rem; text-align: left; }
+    th { background: #f2f2f2; }
+    .tag { background: #e0f7fa; border-radius: 4px; padding: 2px 6px; margin-right: 4px; font-size: 0.85em; display: inline-block; }
+  </style>
+</head>
+<body>
+  <h1>📋 Industry Standards Registry</h1>
+  <p>Here are firms that have adopted the key standards and versions:</p>
+
+  <div id="tables-container"></div>
+
+  <script>
+    const standards = [
+      { name: 'eAppAPI v2.1', yaml: 'standards/eAppAPI/v2.1/adopters.yml' },
+      { name: 'eAppAPI v2.0', yaml: 'standards/eAppAPI/v2.0/adopters.yml' },
+      { name: 'ReplacementAPI v1.0', yaml: 'standards/ReplacementAPI/v1.0/adopters.yml' }
+    ];
+
+    async function loadAndRender() {
+      const container = document.getElementById('tables-container');
+
+      for (let s of standards) {
+        const url = `https://raw.githubusercontent.com/insured-retirement-institute/Standard-Registry/main/${s.yaml}`;
+        try {
+          const res = await fetch(url);
+          const data = jsyaml.load(await res.text());
+
+          const h2 = document.createElement('h2');
+          h2.textContent = s.name;
+          container.appendChild(h2);
+
+          const table = document.createElement('table');
+          const header = `<tr>
+            <th>Firm</th><th>Status</th><th>Date</th><th>Verified</th><th>Contact</th><th>Tags</th><th>Notes</th>
+          </tr>`;
+          table.innerHTML = header;
+
+          data.forEach(entry => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+              <td>${entry.firm}</td>
+              <td>${entry.status}</td>
+              <td>${entry.implementation_date || '-'}</td>
+              <td>${entry.verified ? '✅' : '❌'}</td>
+              <td>${entry.contact || '-'}</td>
+              <td>${(entry.tags || []).map(t => `<span class="tag">${t}</span>`).join('')}</td>
+              <td>${entry.notes || ''}</td>`;
+            table.appendChild(row);
+          });
+
+          container.appendChild(table);
+        } catch (err) {
+          console.error('Error loading', s.yaml, err);
+        }
+      }
+    }
+
+    loadAndRender();
+  </script>
+</body>
+</html>
