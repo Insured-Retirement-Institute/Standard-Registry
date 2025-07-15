@@ -1,0 +1,47 @@
+- firm: DTCC
+  status: Implemented
+  implementation_date: 2025-03-01
+  verified: true
+  contact: Smith, Jeanann F. | jsmith@dtcc.com
+  tags: [partner-ready]
+  notes: 
+
+- firm: Jackson National
+  status: Implemented
+  implementation_date: 2025-03-2025
+  verified: true
+  contact: Vashisht, Amit <amit.vashisht@jackson.com>
+  tags: [pilot firm, in production, partner-ready]
+  notes: 
+
+- firm: Athen
+  status: Implemented
+  implementation_date: 2025-03-2025
+  verified: true
+  contact: Lana Nelson | lnelson@athene.com
+  tags: [pilot firm, in production, partner-ready]
+  notes: 
+
+  - firm: Prudential
+  status: Implemented
+  implementation_date: 2025-04-2025
+  verified: true
+  contact: Robert Moarcas | robert.moarcas@prudential.com
+  tags: [pilot firm, in production, partner-ready]
+  notes: 
+
+  - firm: Sammons
+  status: Implemented
+  implementation_date: 2025-06-2025
+  verified: true
+  contact: Wanderscheid, Janell |jwanderscheid@sfgmembers.com
+  tags: [pilot firm, in production, partner-ready]
+  notes: 
+
+  - firm: New York Life
+  status: Implemented
+  implementation_date: 2025-06-2025
+  verified: true
+  contact: Craig_Fernicola |craig_fernicola@newyorklife.com
+  tags: [pilot firm, in production, partner-ready]
+  notes: 
