@@ -4,6 +4,8 @@ This repository tracks industry adoption of the IRI Digital First for Annuity op
 
 The registry is a centralized, version-controlled list of each standard and the firms that have implemented them. This registry will allow stakeholders to easily identify which firms have adopted specific standards,and which versions, enabling faster, more seamless integrations. This list highlights firms that are implementation-ready, reducing onboarding time and increasing interoperability across the ecosystem.
 
+[**Standard Registry**](https://insured-retirement-institute.github.io/Standard-Registry/)
+
 ## Structure of registry
 Firm name
 - Implementation status (`Implemented`, `In Progress`, `Planned`)
@@ -24,9 +26,10 @@ It captures:
 
 ## Organization of the registry
 The standards/ directory is organized by standard and version. Each version contains an adopters.yml file that lists firms who have implemented that version, including status, dates, and metadata.
+
 <pre> <code> ``` /standards/ ├── eAppAPI/ │ ├── v2.0/ │ │ └── adopters.yml │ ├── v2.1/ │ │ └── adopters.yml ├── ReplacementAPI/ │ └── v1.0/ │ └── adopters.yml ``` </code> </pre>
 
-
+[Standard Registry](https://insured-retirement-institute.github.io/Standard-Registry/)
 
 ## How to engage, contribute, and give feedback
 To add or update your firm's status:
