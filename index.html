@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Industry Standards Registry</title>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+    }
+    h1 {
+      color: #003366;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .tag {
+      background-color: #e0f7fa;
+      border-radius: 4px;
+      padding: 2px 6px;
+      margin-right: 4px;
+      display: inline-block;
+      font-size: 0.85em;
+    }
+  </style>
+</head>
+<body>
+  <h1>📘 ApplicationAPI v1.0 — Implementation Registry</h1>
+  <p>This table shows firms that have adopted <strong>eAppAPI v2.1</strong>. For other versions, see the GitHub repository.</p>
+
+  <table id="registry-table">
+    <thead>
+      <tr>
+        <th>Firm</th>
+        <th>Status</th>
+        <th>Implementation Date</th>
+        <th>Verified</th>
+        <th>Contact</th>
+        <th>Tags</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Data will be inserted here -->
+    </tbody>
+  </table>
+
+  <script>
+    async function loadYAML() {
+      const url = 'https://raw.githubusercontent.com/YOUR-USERNAME/industry-standards-registry/main/standards/ApplicationStatusAPI/v1.0/adopters.yml';
+      try {
+        const response = await fetch(url);
+        const yamlText = await response.text();
+        const data = jsyaml.load(yamlText);
+
+        const tbody = document.querySelector('#registry-table tbody');
+        data.forEach(entry => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${entry.firm}</td>
+            <td>${entry.status}</td>
+            <td>${entry.implementation_date || ''}</td>
+            <td>${entry.verified ? '✅' : '❌'}</td>
+            <td>${entry.contact || ''}</td>
+            <td>${(entry.tags || []).map(tag => `<span class="tag">${tag}</span>`).join('')}</td>
+            <td>${entry.notes || ''}</td>
+          `;
+          tbody.appendChild(row);
+        });
+
+      } catch (error) {
+        console.error('Error loading YAML:', error);
+        document.getElementById('registry-table').insertAdjacentHTML('afterend',
+          `<p style="color:red;">⚠️ Failed to load data. Make sure the YAML file is accessible.</p>`);
+      }
+    }
+
+    loadYAML();
+  </script>
+</body>
+</html>
